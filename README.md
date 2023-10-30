@@ -25,14 +25,12 @@ Article about this project on [**Medium**](https://medium.com/@boolfalse/visuali
 
 - Download:
 ```shell
-git clone git@github.com:boolfalse/radio-streaming-project.git
-cd radio-streaming-project/
+git clone git@github.com:boolfalse/radio-streaming-project.git && cd radio-streaming-project/
 ```
 
 - Install dependencies:
 ```shell
-npm i
-npm i --prefix=server/
+npm i && npm i --prefix=server/
 ```
 
 - Bundle the project:
@@ -40,10 +38,24 @@ npm i --prefix=server/
 npm run build
 ```
 
+- Setup _**.env**_ credentials:
+```dotenv
+APP_ENV="development"
+VITE_BACKEND_PORT=3001
+
+VITE_SOCKET_PORT=3000
+VITE_SOCKET_HOST="http://localhost"
+
+RADIO_GIST_ID="6b66a0065c70a33f95e0e831cb0c7e9f"
+RADIO_PLAYLIST_FILE="tracks"
+```
+
 - Run the project (by a single command):
 ```shell
 npm run project
 ```
+
+- Check the result at [http://localhost:3000](http://localhost:3000).
 
 
 ### Author:
