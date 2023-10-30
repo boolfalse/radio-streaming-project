@@ -1,27 +1,51 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Visualized radio-streaming with React/Vite/Node/FFmpeg/Socket.io
 
-Currently, two official plugins are available:
+<img src="https://i.imgur.com/KwGKjNj.gif" style="width: 100%"/>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+### About:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+This is a simple Online Radio app built with React.js, Vite, Node.js, FFmpeg, and Socket.io.
 
-- Configure the top-level `parserOptions` property like this:
+The app is a single-page application that uses the Web Audio API to play audio files.
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+It gets audio file information from the remote editable document, downloads the appropriate audio file from the cloud, and continuously adds it to the stream. After the song is finished, it is deleted from the server. And repeats this process over and over by selecting some random track from the track list.
+
+Article about this project on [**Medium**](https://medium.com/@boolfalse/visualized-radio-streaming-with-react-vite-node-ffmpeg-socket-io-9ed6feb6fcc3).
+
+
+### Prerequisites:
+
+- [Node.js](https://nodejs.org/en/download)
+- [FFmpeg](https://ffmpeg.org/download.html)
+
+
+### Installation:
+
+- Download:
+```shell
+git clone git@github.com:boolfalse/radio-streaming-project.git
+cd radio-streaming-project/
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- Install dependencies:
+```shell
+npm i
+npm i --prefix=server/
+```
+
+- Bundle the project:
+```shell
+npm run build
+```
+
+- Run the project (by a single command):
+```shell
+npm run project
+```
+
+
+### Author:
+
+- [BoolFalse](https://boolfalse.com/)
