@@ -1,8 +1,7 @@
 
 ## Visualized radio-streaming with React/Vite/Node/FFmpeg/Socket.io
 
-<img src="https://i.imgur.com/KwGKjNj.gif" style="width: 100%"/>
-
+![](https://i.imgur.com/KwGKjNj.gif)
 
 ### About:
 
@@ -28,17 +27,7 @@ Article about this project on [**Medium**](https://medium.com/@boolfalse/visuali
 git clone git@github.com:boolfalse/radio-streaming-project.git && cd radio-streaming-project/
 ```
 
-- Install dependencies:
-```shell
-npm i && npm i --prefix=server/
-```
-
-- Bundle the project:
-```shell
-npm run build
-```
-
-- Setup _**.env**_ credentials:
+- Setup _**.env**_ credentials as follows:
 ```dotenv
 APP_ENV="development"
 VITE_BACKEND_PORT=3001
@@ -48,6 +37,16 @@ VITE_SOCKET_HOST="http://localhost"
 
 RADIO_GIST_ID="6b66a0065c70a33f95e0e831cb0c7e9f"
 RADIO_PLAYLIST_FILE="tracks"
+```
+
+- Install dependencies:
+```shell
+npm i && npm i --prefix=server/
+```
+
+- Bundle the project:
+```shell
+npm run build
 ```
 
 - Run the project (by a single command):
